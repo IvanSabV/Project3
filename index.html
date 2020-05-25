@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Видеосервис</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+
+  <header class="head">
+    <a href="#" class="head__logo">
+      <img src="img/logo.svg" alt="" class="logo" width="37" height="36">
+      <p>Видеосервис</p>
+    </a>
+    <form action="#" method="get" class="head__search">
+      <input class="head__input" type="search" name="search" placeholder="Поиск...">
+      <button class="head__btn" type="submit">Найти</button>
+    </form>
+    <div class="user">
+      <div class="user__hide">
+        <p id="out"></p>
+        <div class="user__changename">
+          <input type="text" id="change" class="change-name">
+          <input class="name-save" type="button">
+        </div>
+        <button class="user__logout" type="button">Выйти</button>
+      </div>
+      <button class="user__login-btn" type="button">Войти</button>
+    </div>
+    <form class="login">
+      <div class="login__form">
+        <h2>Вход</h2>
+        <fieldset>
+          <input id="username" placeholder="Логин" autofocus="" required="" type="text">
+          <input id="password" placeholder="Пароль" required="" type="password">
+        </fieldset>
+        <label class="container">Запомнить
+          <input type="checkbox" class="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <button id="entry" class="log-btn" type="submit">Войти</button>
+
+      </div>
+    </form>
+  </header>
+
+  <main class="content">
+    <nav class="content__nav">
+      <a class="tablinks" onclick="tabs(event,'films')" id="defaultOpen"><h1>Фильмы</h1></a>
+      <a class="tablinks" onclick="tabs(event,'tvprogram')"><h1>Телеканалы</h1></a>
+    </nav>
+    <section id="films" class="tabcontent">
+      <div class="news">
+        <h2><img src="img/icon-fire.svg" alt="" width="20" height="20">Новинки</h2>
+        <div class="news__items">
+          <div class="item">
+            <a href="#">
+              <div class="item__img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/image-1-desktop@1x.webp, img/image-1-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/image-1-tablet@1x.webp, img/image-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/image-1.webp, img/image-1@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/image-1-desktop@1x.jpg, img/image-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/image-1-tablet@1x.jpg, img/image-1-tablet@2x.jpg 2x">
+                  <img src="img/image-1.jpg" alt="">
+                </picture>
+                <div class="item__hover">
+                  Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века».
+                </div>
+              </div>
+            <h3>Мульт в кино. Выпуск №103. Некогда грустить!</h3>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="item__img">
+                <img src="img/image-2.png" alt="">
+                <div class="item__hover">
+                  Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон
+                </div>
+              </div>
+              <h3>Новый Бэтмен</h3>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="item__img">
+                <img src="img/image-3.png" alt="">
+                <div class="item__hover">
+                  Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место
+                </div>
+              </div>
+              <h3>Однажды... в Голливуде</h3>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="item__img">
+                <img src="img/image-4.png" alt="">
+                <div class="item__hover">
+                  Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.
+                </div>
+              </div>
+              <h3>Стриптизёрши</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="genres">
+        <h2>Жанры</h2>
+        <div class="genres__items">
+          <a href="#">
+            <div class="item-1 item">
+              <img src="img/icon-comedy.svg" alt="">
+              <h4>Комедии</h4>
+            </div>
+          </a>
+          <a href="#">
+            <div class="item-2 item">
+              <img src="img/icon-drama.svg" alt="">
+              <h4>Драмы</h4>
+            </div>
+          </a>
+          <a href="#">
+            <div class="item-3 item">
+              <img src="img/icon-fantastic.svg" alt="">
+              <h4>Фантастика</h4>
+            </div>
+          </a>
+          <a href="#">
+            <div class="item-4 item">
+              <img src="img/icon-horror.svg" alt="">
+              <h4>Ужасы</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="tvprogram" class="tabcontent">
+        <div class="tv">
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/first.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>Первый канал</h2>
+              <p class="prog active"><span>13:00</span>Новости (с субтитрами)</p>
+              <p class="prog"><span>14:00</span>Давай поженимся</p>
+              <p class="prog"><span>15:00</span>Другие новости</p>
+            </div>
+          </div>
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/2x2.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>2x2</h2>
+              <p class="prog active"><span>13:00</span>МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+              <p class="prog"><span>14:00</span>ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+              <p class="prog"><span>15:00</span>БУРДАШЕВ. Сезон 1, 20 серия</p>
+            </div>
+          </div>
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/rbc.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>РБК</h2>
+              <p class="prog active"><span>13:00</span>ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
+              <p class="prog"><span>14:00</span>ДЕНЬ. Главные темы</p>
+              <p class="prog"><span>15:00</span>Главные новости</p>
+            </div>
+          </div>
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/amedia.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>AMEDIA PREMIUM</h2>
+              <p class="prog active"><span>13:00</span>Клиент всегда мёртв</p>
+              <p class="prog"><span>14:00</span>Голодные игры: Сойка-пересмешница. Часть I</p>
+              <p class="prog"><span>15:00</span>Секс в большом городе</p>
+            </div>
+          </div>
+          <div class="tv-item">
+            <div class="tv-item__channel">
+              <img src="img/amedia.svg" alt="">
+            </div>
+            <div class="tv-item__program">
+              <h2>AMEDIA PREMIUM</h2>
+              <p class="prog active"><span>13:00</span>Клиент всегда мёртв</p>
+              <p class="prog"><span>14:00</span>Голодные игры: Сойка-пересмешница. Часть I</p>
+              <p class="prog"><span>15:00</span>Секс в большом городе</p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div>
+        <img class="footer__logo" width="33" height="64" src="img/htc-cs-logo.svg" alt="">
+      </div>
+      <div>
+        <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+        <p>+7 (3412) 93-88-61, 43-29-29</p>
+        <p><a href="https://htc-cs.ru/">htc-cs.ru</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/picturefill.js"></script>
+
+</body>
+</html>
